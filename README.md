@@ -9,7 +9,7 @@ A clean and responsive **Product Landing Page** built with **HTML**, **CSS (Flex
 Add your live site link here:
 
 ```
-https://yourdomain.com
+https://shorifulrobin.me
 ```
 
 ---
@@ -97,7 +97,7 @@ Add screenshots here if needed.
 1. Download or clone the project:
 
 ```
-git clone https://github.com/yourrepo/nova-landing.git
+git clone https://github.com/md-shoriful-alam-robin/shorifulrobin-P--Nova-Product-
 ```
 
 2. Open `index.html` in your browser.
