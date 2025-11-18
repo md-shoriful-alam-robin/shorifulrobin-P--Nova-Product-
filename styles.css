@@ -1,0 +1,267 @@
+/* Basic reset & variables */
+:root {
+  --accent: #3b82f6;
+  --muted: #6b7280;
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.4;
+}
+
+/* ============================
+   Header + Fixed Navigation
+   ============================ */
+.site-header {
+  position: fixed; /* NAV should always be at top of viewport (test requirement) */
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.96),
+    rgba(255, 255, 255, 0.9)
+  );
+  border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+/* header inner uses flexbox */
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex; /* flexbox used here (test requirement) */
+  align-items: center;
+  gap: 18px;
+  justify-content: space-between;
+}
+
+/* Logo */
+.header-inner img {
+  display: block;
+  height: 48px;
+  width: auto;
+  border-radius: 6px;
+}
+
+/* Navigation - use flex */
+.main-nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* nav links */
+.nav-link {
+  text-decoration: none;
+  color: var(--muted);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.nav-link:hover {
+  color: var(--accent);
+  background: rgba(59, 130, 246, 0.06);
+}
+
+/* ============================
+   Hero (push content below fixed header)
+   ============================ */
+.hero {
+  padding-top: 110px; /* give space for fixed header */
+  padding-bottom: 40px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.06), transparent);
+  margin-bottom: 18px;
+}
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.hero h1 {
+  margin: 0 0 12px 0;
+  font-size: clamp(1.6rem, 2.4vw, 2.6rem);
+  line-height: 1.08;
+}
+.hero p {
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+.cta {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* ============================
+   Sections
+   ============================ */
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 16px;
+  background: transparent;
+}
+
+.features .cards {
+  display: flex; /* flexbox used again */
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.card {
+  background: var(--card);
+  flex: 1 1 260px;
+  padding: 18px;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.04);
+}
+
+/* Pricing grid - uses CSS Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.plan {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.04);
+  text-align: center;
+}
+.plan.recommended {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+  border-color: rgba(59, 130, 246, 0.12);
+}
+
+/* Demo video */
+.video-wrap {
+  max-width: 900px;
+  margin: 12px auto 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.05);
+}
+#video {
+  width: 100%;
+  height: 480px;
+  display: block;
+  border: 0;
+}
+
+/* Contact form */
+.contact form {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.contact input[type="email"] {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  min-width: 260px;
+  font-size: 1rem;
+}
+.contact input[type="submit"] {
+  background: var(--accent);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 0;
+  font-weight: 700;
+  cursor: pointer;
+}
+.contact input[type="submit"]:hover {
+  opacity: 0.95;
+}
+
+/* Footer */
+.site-footer {
+  padding: 24px 16px;
+  text-align: center;
+  color: var(--muted);
+  margin-top: 28px;
+}
+
+/* Small utility: visually hidden label for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================
+   Responsive: media query (test requirement)
+   ============================ */
+@media (max-width: 800px) {
+  .header-inner {
+    padding: 10px;
+  }
+  .main-nav {
+    gap: 8px;
+  }
+  /* stack hero text smaller screens */
+  .hero-content {
+    padding: 26px 12px;
+  }
+  /* pricing stack to single column for mobile */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  /* video smaller height */
+  #video {
+    height: 260px;
+  }
+}
+
+/* Extra small screens: collapse nav to wrap */
+@media (max-width: 520px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .main-nav {
+    flex-wrap: wrap;
+  }
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+  .contact form {
+    flex-direction: column;
+  }
+}

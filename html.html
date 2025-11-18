@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova Product - landing</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Header + Nav (required: id="header",
+      header-img inside, id="nav-bar")-->
+    <header id="header" class="site-header">
+      <div class="header-inner">
+        <a href="#hero" class="logo-link">
+          <img
+            id="header-img"
+            src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg"
+            width="140px"
+            height="48px"
+            alt="beautiful"
+        /></a>
+
+        <!-- required: nav with id="nav-bar"-->
+        <nav id="nav-bar" class="main-nav" aria-label="primary">
+          <!-- at least 3 clickable elements with class nav-link, each with href linking to page ids -->
+
+          <a class="nav-link" href="#features">Features</a>
+          <a class="nav-link" href="#Pricing">Pricing</a>
+          <a class="nav-link" href="#Demo">Demo</a>
+          <a class="nav-link" href="#Contactt">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!--Hero Section-->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1>Nova Product — Modern layout tools for creators</h1>
+        <p>
+          Design fast, build faster. Responsive grid helpers and components to
+          speed up your workflow.
+        </p>
+        <a class="cta" href="#form">Join Waitlsit</a>
+      </div>
+    </section>
+
+    <!-- Feature (nav target)-->
+    <section id="Features" classs="features">
+      <h2>Key Features</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Responsive Grid</h3>
+          <p>
+            Build two-dimensional layouts quickly with named areas and flexible
+            tracks.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Adaptive Components</h3>
+          <p>Keyboard friendly patterns and semantic HTML out of the box.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Pricing (nav target) -->
+    <section id="pricing" class="pricing">
+      <h2>Pricing</h2>
+      <div class="pricing-grid">
+        <div class="pricing-grid">
+          <div class="plan">
+            <h3>Starter</h3>
+            <p class="price">Free</p>
+            <ul>
+              <li>Basic components</li>
+              <li>Community support</li>
+            </ul>
+          </div>
+          <div class="plan recommended">
+            <h3>Pro</h3>
+            <p class="price">$9 / mo</p>
+            <ul>
+              <li>All components</li>
+              <li>Priority support</li>
+            </ul>
+          </div>
+          <div class="plan">
+            <h3>Team</h3>
+            <p class="price">$29 / mo</p>
+            <ul>
+              <li>Team seats</li>
+              <li>Enterprise features</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Demo / Video (nav target)-->
+    <section id="demo" class="demo">
+      <h2>Product Demo</h2>
+      <div class="video-wrap">
+        <!-- required: an iframe or video with id="video" and src attribute -->
+        <iframe
+          id="video"
+          src="https://www.youtube.com/embed/fGWDyfoPgRY"
+          title="Nova Product demo video"
+          frameborder="0"
+          allow="accelerometer;autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Contact / Form (required: id="form", input id="email", submit id="submit") -->
+
+    <section id="contact" class="contact">
+      <h2>Get early access</h2>
+      <form
+        id="form"
+        action="https://shorifulrobin.me/email-submit"
+        method="post"
+      >
+        <!-- required: input with id="email", type="email", placeholder, name="email" -->
+
+        <label for="email" class="sr-only">Email address</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Enter your email address"
+          required
+        />
+
+        <!-- required: submit input with id="submit" and type="submit" -->
+        <input id="submit" type="submit" value="Request Invite" />
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="site-footer">
+      <p>
+        © <span id="year"></span> MD Shoriful Alam Robin. All rights reserved.
+        Nova Product — Built with ❤️
+      </p>
+    </footer>
+
+    <script>
+      // small script for current year and smooth scrolling for nav links (optional)
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Smooth scroll for in-page anchors
+      document.querySelectorAll("a.nav-link, .logo-link, .cta").forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const href = a.getAttribute("href");
+          if (href && href.startsWith("#")) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
