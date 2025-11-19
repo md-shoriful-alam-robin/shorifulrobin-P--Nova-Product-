@@ -4,7 +4,7 @@ A clean and responsive **Product Landing Page** built with **HTML**, **CSS (Flex
 
 ---
 
-## 🚀 Live Preview
+##  Live Preview
 
 Add your live site link here:
 
@@ -14,10 +14,10 @@ https://shorifulrobin.me
 
 ---
 
-## 📌 Features
+## Features
 
 - Fully responsive layout
-- Fixed header navigation bar
+- Fixed the header navigation bar
 - Smooth scroll for in-page links
 - Hero section with CTA
 - Features section using Flexbox
@@ -38,7 +38,7 @@ https://shorifulrobin.me
 
 ---
 
-## 🧩 Technologies Used
+## Technologies Used
 
 - **HTML5**
 - **CSS3** (Flexbox, Grid, Media Queries)
@@ -54,25 +54,25 @@ https://shorifulrobin.me
 - Contains logo (`#header-img`)
 - Nav links with class `nav-link`
 
-### 2️⃣ Hero Section
+### Hero Section
 
 - Intro text + call-to-action button
 - Pushes content down using padding to avoid overlap with fixed header
 
-### 3️⃣ Features Section
+### Features Section
 
 - Uses Flexbox for responsive card layout
 
-### 4️⃣ Pricing Section
+### Pricing Section
 
 - CSS Grid creates a 3‑column layout
 - Mobile view switches to 1 column
 
-### 5️⃣ Demo Section
+### Demo Section
 
 - Embedded YouTube video using `iframe` with id `#video`
 
-### 6️⃣ Contact Form
+### Contact Form
 
 - Required form with id `form`
 - Contains:
@@ -80,19 +80,19 @@ https://shorifulrobin.me
   - `input#email` (type=email)
   - `input#submit` (type=submit)
 
-### 7️⃣ Footer
+### Footer
 
 - Displays current year using JS
 
 ---
 
-## 🖼️ Screenshots (Optional)
+##  Screenshots (Optional)
 
-Add screenshots here if needed.
+Please add screenshots here if you need them.
 
 ---
 
-## 📦 How to Use
+## How to Use
 
 1. Download or clone the project:
 
@@ -108,12 +108,12 @@ git clone https://github.com/md-shoriful-alam-robin/shorifulrobin-P--Nova-Produc
 ## 🛠️ Customization Tips
 
 - Replace logo URL in the `<img>` tag
-- Change accent color in `:root` variables
+- Change accent color in `: root` variables
 - Update pricing, features, and text as needed
 
 ---
 
-## 🧪 FreeCodeCamp Test‑Checklist
+##  FreeCodeCamp Test‑Checklist
 
 ✔ Fixed header with ID `header`
 ✔ Image inside header with ID `header-img`
@@ -127,7 +127,7 @@ git clone https://github.com/md-shoriful-alam-robin/shorifulrobin-P--Nova-Produc
 
 ---
 
-## 📜 License
+## License
 
 This project is free to use and modify.
 
